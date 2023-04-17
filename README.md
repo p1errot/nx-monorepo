@@ -6,7 +6,26 @@
 
 ## Development server
 
-Run `nx serve nest-micro` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+To run all applications at once for dev server, run `nx run-many --target=serve --all=true`. The app will automatically reload if you change any of the source files.
+
+Run `nx serve nest-micro` for a api dev server. Navigate to http://localhost:3000/. 
+
+Run `nx serve admin` for a angular dev server. Navigate to http://localhost:4200/.
+
+Run `nx serve client` for a react dev server. Navigate to http://localhost:3500/.
+
+To update any application port, update `project.json` config file located in the app root folder and navigate to the following path:
+```json
+{
+  "targets": {
+    "serve": {
+      "options": {
+        "port": "<number>"
+      }
+    }
+  }
+}
+```
 
 ## Understand this workspace
 
